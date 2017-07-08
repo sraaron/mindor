@@ -92,13 +92,13 @@ angular.module('starter.services', [])
     Real Estate Stocks
   */
   var socials = [{
-    img: '../img/icons/highRisk.png',
+    img: 'img/icons/highRisk.png',
     title: 'High Risk',
     count: 6,
     color: '#000000',
     description: '<i class="italic thin">"Emerging Markets funds, growth and value equity funds."</i> </br><span class="small"><b>70%</b> users recommend<span>'
   }, {
-    img: '../img/icons/medRisk.png',
+    img: 'img/icons/medRisk.png',
     title: 'Medium Risk',
     count: 3,
     color: '#D0021B',
@@ -106,7 +106,7 @@ angular.module('starter.services', [])
     
     description: '<i class="italic thin">"Selection of index funds and investment grade bond funds."</i></br><span class="small">In partnership with <b>Soc.Gen.</b><span>'
   }, {
-    img: '../img/icons/lowRisk.png',
+    img: 'img/icons/lowRisk.png',
     title: 'Low Risk',
     count: 0.75,
     color: '#F5A623',
@@ -114,7 +114,7 @@ angular.module('starter.services', [])
 
     description: '<i class="italic thin">"Selection of money market funds and governemnt bond funds."</i></br><span class="small"><b>20%</b> users recommend<span>'
   }, {
-    img: '../img/icons/Saving.png',
+    img: 'img/icons/Saving.png',
     title: 'Buy Bitcoin',
     count: 576,
     color: '#FFD700',

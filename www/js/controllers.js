@@ -5,14 +5,15 @@ angular.module('starter.controllers', [])
   // --------------------- Pie Chart Configuration -----------------------------
   $scope.pieLabels = ["Leisure", "Daily Expenses", "Emergency"];
   $scope.pieData = [300, 200, 100];
-
+  
   // --------------------- Line Chart Configuration ----------------------------
-  $scope.lineSeries = ['Active', 'Inactive'];
+  //$scope.lineSeries = ['Active', 'Inactive'];
   $scope.lineLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
   $scope.lineData = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
+    [5, 40, 66, 75, 80, 90, 145],
+    [5, 45, 85, 100, 120, 150, 200]
   ];
+  $scope.colors = ['#45b7cd', '#ff6384'];
 
 
   // --------------------- animation for green color .badge-notification icon---
