@@ -111,6 +111,49 @@ return {
 };
 })
 
+.factory('Piggies', function(){
+  var piggies = [
+    {
+      cathegory:"Leisure",
+      icon:"ion-android-plane",
+      defaultValue: "8"
+    },
+    {
+      cathegory:"Sports",
+      icon:"ion-android-bicycle",
+      defaultValue: "4"
+    },
+    {
+      cathegory:"Daily Expenses",
+      icon:"ion-android-cart",
+      defaultValue: "4"
+    }
+    ,
+    {
+      cathegory:"Housing",
+      icon:"ion-android-home",
+      defaultValue: "4"
+    }
+    ,
+    {
+      cathegory:"Emergency",
+      icon:"ion-ios-medkit",
+      defaultValue: "1"
+    },
+    {
+      cathegory:"Education",
+      icon:"ion-erlenmeyer-flask",
+      defaultValue: "0"
+    }   
+    ];
+
+    return {
+      all: function() {
+        return piggies;
+      },
+    };
+
+})
 
 .factory('Accounts', function() {
   var socials = [{

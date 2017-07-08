@@ -1,21 +1,18 @@
 <ion-view view-title="My PiggyBank">
   <ion-content>
 
-
     <ion-list>
-      <li class="item">
-        <label class="input-label"> Range Select Problem: (min) and (max)
-          <div class="range range-assertive" >
-            <i class="icon ion-android-plane"></i>Leisure</ion-item>
-            <input type="range" min="0" max="39" value="5" step="1">
-            <i class="icon ion-android-plane larger"></i>
+      <li class="item" ng-repeat="piggy in piggies">
+        <label class="input-label">          
+          <div class="range" >                        
+            {{piggy.cathegory}}<i class="icon {{piggy.icon}} larger"></i></ion-item>
+            <input type="range" min="0" max="100" value="{{piggy.defaultValue}}" step="1" ng-model="range-model">
+            <i class="icon {{piggy.icon}}"></i> {{range-model}}
             </ion-item>
           </div>
-
         </label>
       </li>
     </ion-list>
-
 
     <ion-list>
       <ion-item class="item-icon-left">
