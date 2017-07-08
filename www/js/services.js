@@ -104,7 +104,7 @@ angular.module('starter.services', [])
     color: '#D0021B',
     color: '#D0021B',
     
-    description: '<i class="italic thin">"Selection of index funds and investment grade bond funds."</i></br><span class="small"><b>60%</b> users recommend<span>'
+    description: '<i class="italic thin">"Selection of index funds and investment grade bond funds."</i></br><span class="small">In partnership with <b>Soc.Gen.</b><span>'
   }, {
     img: '../img/icons/lowRisk.png',
     title: 'Low Risk',
@@ -120,7 +120,7 @@ angular.module('starter.services', [])
     color: '#FFD700',
     url: '',
 
-    description: '</br><i class="italic thin">"Get your house at The Peak today, or maybe next year"</i></br><span class="small"><b>99%</b> users recommend<span>'
+    description: '</br><i class="italic thin">"Get your house at The Peak today, or maybe next year"</i></br><span class="small">Powered by <b>Gatecoin</b><span>'
   }
 ];
 
@@ -144,27 +144,25 @@ return {
       defaultValue: "4"
     },
     {
+      cathegory:"Education",
+      icon:"ion-erlenmeyer-flask",
+      defaultValue: "-2"
+    },
+    {
       cathegory:"Daily Expenses",
       icon:"ion-android-cart",
       defaultValue: "4"
-    }
-    ,
+    },
     {
       cathegory:"Housing",
       icon:"ion-android-home",
-      defaultValue: "4"
-    }
-    ,
+      defaultValue: "6"
+    },
     {
       cathegory:"Emergency",
       icon:"ion-ios-medkit",
-      defaultValue: "1"
-    },
-    {
-      cathegory:"Education",
-      icon:"ion-erlenmeyer-flask",
-      defaultValue: "0"
-    }   
+      defaultValue: "2"
+    }  
     ];
 
     return {

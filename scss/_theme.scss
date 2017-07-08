@@ -146,9 +146,15 @@ ion-content {
   background: #000
 }
 
-.allocation {
+.allocation_green {
   position:absolute;
   color: green;
+  float: right;  
+}
+
+.allocation_red {
+  position:absolute;
+  color: red;
   float: right;  
 }
 
