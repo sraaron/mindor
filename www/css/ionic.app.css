@@ -113,12 +113,23 @@ ion-content {
   margin-right: 0;
   font-size: 10px !important; }
   .item-note.withcount {
-    margin-right: 40px; }
+    margin-right: 0px; }
 
-.item .badge {
-  padding: 2px 7px !important; }
-  .item .badge.badge-balanced {
-    background-color: #060606 !important; }
+.item .badge-balanced {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: green;
+  opacity: 0.6; }
+
+.item .badge-neg {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: red;
+  opacity: 0.6; }
 
 .item-avatar-notify {
   width: 12px;
