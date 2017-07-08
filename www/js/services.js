@@ -63,52 +63,45 @@ angular.module('starter.services', [])
 })
 
 .factory('Socials', function() {
-
+  /*
+    Governmet Bonds
+    Corporate Bonds
+    Emerging Market Stocks
+    Small Company Stocks
+    Large Company Stocks
+    Real Estate Stocks
+  */
   var socials = [{
     img: '../img/icons/fb.svg',
-    title: 'Facebook',
+    title: 'High Risk',
     count: 56,
-    color: '#375a95',
-    description: '<b>Donald Trump</b> has liked your status <i class="italic thin">"F*ck me I am Famous"</i> <span class="small"><b>13</b> min ago<span>'
+    color: '#AA0000',
+    description: '<b>Stocks</b> are know for high return rates <i class="italic thin">""</i> <span class="small"><b>568</b> users recommend<span>'
   }, {
     img: '../img/icons/youtube.svg',
-    title: 'Youtube',
+    title: 'Medium Risk',
     count: 10,
-    color: '#e52215',
-    color: '#e52215',
+    color: '#FFFF00',
+    color: '#FFFF00',
     
     description: '<b>Jay Garic</b> has commented on your proile <i class="italic thin">"How should I <b>buy</b> your app"</i>'
   }, {
     img: '../img/icons/twitter.svg',
-    title: 'Twitter',
+    title: 'Low Risk',
+    count: 78,
+    color: '#0000FF',
+    url: 'https://twitter.com/deshatom',
+
+    description: '<b>NodeSphere and 6 others</b> liked your Retweet <span class="small thin"> Nov <b>9</b></span>'
+  }, {
+    img: '../img/icons/twitter.svg',
+    title: 'Buy Bitcoin',
     count: 78,
     color: '#2196f3',
     url: 'https://twitter.com/deshatom',
 
     description: '<b>NodeSphere and 6 others</b> liked your Retweet <span class="small thin"> Nov <b>9</b></span>'
-  },
-
-  {
-    img: '../img/icons/snapchat.svg',
-    title: 'SnapChat',
-    count: 2,
-    color: '#b2af16',
-    description: 'You have few messages from <b>SnapChat<b> 12 min ago'
-  }, {
-    img: '../img/icons/linkedin.svg',
-    title: 'LinkedIn',
-    count: 65,
-    color: '#2285b6',
-    description: '<b>12</b> jobs may interest based on your <b>profile</b> - Overview'
-  }, {
-    img: '../img/icons/pinterest.svg',
-    title: 'Pinterest',
-    count: 345,
-    color: '#bd0a1c',
-    url: 'https://www.pinterest.com/deshatom/',
-
-    description: '<b>Sarah Knight</b>, <b>Lisa Fox</b> and <b>48</b> other Pinned your pin <span class="small thin"><b>2</b> days ago</span>'
-  },
+  }
 ];
 
 return {
