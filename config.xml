@@ -20,5 +20,6 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-    <plugin name="cordova-plugin-google-analytics" spec="~1.5.6" />
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-plugin-google-analytics" spec="^1.5.6" />
 </widget>
