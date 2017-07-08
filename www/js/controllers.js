@@ -75,9 +75,7 @@ angular.module('starter.controllers', [])
    */
   var gateCoinHelper = function() {
 
-    this.sendRequiredHeader = function(publicKey,key) {
-      $.ajaxSetup({
-        beforeSend: function (jqXHR, settings) {
+    var bfrSending = function (jqXHR, settings) {
           //var publicKey = $("#input_public_key").val();          
           //var key = $("#input_key").val();
           if (publicKey == "") {
@@ -102,7 +100,11 @@ angular.module('starter.controllers', [])
             jqXHR.setRequestHeader("API_REQUEST_SIGNATURE", hashInBase64);
             jqXHR.setRequestHeader("API_REQUEST_DATE", now);
           }
-        }
+        };
+
+    this.sendRequiredHeader = function(publicKey,key) {
+      $.ajaxSetup({
+        beforeSend: bfrSending
       });
     }
 
