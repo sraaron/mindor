@@ -79,6 +79,16 @@ angular.module('starter', ['ionic', 'chart.js', 'starter.controllers', 'starter.
     }
   })
 
+  .state('tab.piggy', {
+    url: '/piggy',
+    views: {
+      'tab-piggy': {
+        templateUrl: 'templates/tab-piggy.html',
+        controller: 'PiggyCtrl'
+      }
+    }
+  })
+
   .state('tab.account', {
     url: '/account',
     views: {

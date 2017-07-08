@@ -53,4 +53,8 @@ angular.module('starter.controllers', [])
 
 .controller('AccountCtrl', function($scope, Accounts, $stateParams) {
   $scope.items = Accounts.all();
+})
+
+.controller('PiggyCtrl', function($scope, Accounts, $stateParams) {
+  $scope.items = Accounts.all();
 });
