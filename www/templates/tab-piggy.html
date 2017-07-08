@@ -1,52 +1,17 @@
 <ion-view view-title="My PiggyBank">
   <ion-content>
-
     <ion-list>
       <li class="item" ng-repeat="piggy in piggies">
-        <label class="input-label">          
-          <div class="range" >                        
-            {{piggy.cathegory}}<i class="icon {{piggy.icon}} larger"></i></ion-item>
-            <input type="range" min="0" max="100" value="{{piggy.defaultValue}}" step="1" ng-model="range-model">
-            <i class="icon {{piggy.icon}}"></i> {{range-model}}
+        <label class="input-label">       
+          {{piggy.cathegory}}   
+          <div class="range" >                                    
+            <i class="icon {{piggy.icon}} larger"></i>
+            <input type="range" ng-model="currentVal" min="0" max="100" value="{{piggy.defaultValue}}" step="1">
+            <i class="icon {{piggy.icon}}"></i> {{currentVal}}%
             </ion-item>
           </div>
         </label>
       </li>
-    </ion-list>
-
-    <ion-list>
-      <ion-item class="item-icon-left">
-        <ion-item class="range range-dark">
-          <i class="icon ion-ios7-sunny-outline"></i>
-          <input type="range" value="50" min="0" max="100" step="1">
-        </ion-item>
-      </ion-item>
-      
-      <ion-item class="item-icon-left">
-        <i class="icon ion-android-plane"></i>Leisure</ion-item>
-      <ion-item class="range range-positive">% rate
-        <input type="range" value="50" min="0" max="100" step="1">
-      </ion-item>
-      <ion-item class="item-icon-left">
-        <i class="icon ion-android-bicycle"></i>Health &amp; Beauty</ion-item>
-      <ion-item class="range range-positive">% rate
-        <input type="range" value="50" min="0" max="100" step="1">
-      </ion-item>
-      <ion-item class="item-icon-left">
-        <i class="icon ion-android-cart"></i>Daily Expenses</ion-item>
-      <ion-item class="range range-positive">% rate
-        <input type="range" value="50" min="0" max="100" step="1">
-      </ion-item>
-      <ion-item class="item-icon-left">
-        <i class="icon ion-android-home"></i>Housing &amp; Utilities</ion-item>
-      <ion-item class="range range-positive">% rate
-        <input type="range" value="50" min="0" max="100" step="1">
-      </ion-item>
-      <ion-item class="item-icon-left">
-        <i class="icon ion-ios-medkit"></i>Emergency</ion-item>
-      <ion-item class="range range-positive">% rate
-        <input type="range" value="50" min="0" max="100" step="1">
-      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

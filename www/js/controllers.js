@@ -57,4 +57,5 @@ angular.module('starter.controllers', [])
 
 .controller('PiggyCtrl', function($scope, Piggies, $stateParams) {
   $scope.piggies = Piggies.all();
+  $scope.currentVal;
 });

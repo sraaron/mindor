@@ -100,7 +100,7 @@ angular.module('starter.services', [])
     color: '#FFD700',
     url: 'https://twitter.com/deshatom',
 
-    description: '</br><i class="italic thin">"Get your ouse at The Peak today, or maybe next year"</i></br><span class="small"><b>99%</b> users recommend<span>'
+    description: '</br><i class="italic thin">"Get your house at The Peak today, or maybe next year"</i></br><span class="small"><b>99%</b> users recommend<span>'
   }
 ];
 
