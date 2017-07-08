@@ -73,23 +73,23 @@ angular.module('starter.services', [])
   */
   var socials = [{
     img: '../img/icons/fb.svg',
-    title: 'High Risk',
+    title: 'High Risk Investment',
     count: 56,
-    color: '#AA0000',
-    description: '<b>Stocks</b> are know for high return rates <i class="italic thin">""</i> <span class="small"><b>568</b> users recommend<span>'
+    color: '#000000',
+    description: '<b>Known</b> for high volatility <i class="italic thin">"Emerging Markets and Large corporation Stocks can provide high returns"</i> <span class="small"><b>568</b> users recommend<span>'
   }, {
     img: '../img/icons/youtube.svg',
-    title: 'Medium Risk',
+    title: 'Medium Risk Investment',
     count: 10,
-    color: '#FFFF00',
-    color: '#FFFF00',
+    color: '#F5A623',
+    color: '#F5A623',
     
     description: '<b>Jay Garic</b> has commented on your proile <i class="italic thin">"How should I <b>buy</b> your app"</i>'
   }, {
     img: '../img/icons/twitter.svg',
     title: 'Low Risk',
     count: 78,
-    color: '#0000FF',
+    color: '#D0021B',
     url: 'https://twitter.com/deshatom',
 
     description: '<b>NodeSphere and 6 others</b> liked your Retweet <span class="small thin"> Nov <b>9</b></span>'
@@ -97,7 +97,7 @@ angular.module('starter.services', [])
     img: '../img/icons/twitter.svg',
     title: 'Buy Bitcoin',
     count: 78,
-    color: '#2196f3',
+    color: '#FFD700',
     url: 'https://twitter.com/deshatom',
 
     description: '<b>NodeSphere and 6 others</b> liked your Retweet <span class="small thin"> Nov <b>9</b></span>'
