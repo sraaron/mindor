@@ -55,6 +55,60 @@ angular.module('starter.controllers', [])
 .controller('SocialCtrl', function($scope, Socials, $stateParams, $ionicPopup, $timeout, Items) {
   $scope.items = Socials.all();
 
+  $scope.exachangeInterface = function(exchangeID) {
+    if(exchangeID == "gatecoin"){
+
+    } else {
+      // handle other exxcanges
+      return
+    }
+  }
+
+  /**
+   * A set of functions that facilitate communication with the GateCoin RESTFull API
+   * According to https://github.com/Gatecoin/RESTful-API-Implementation, API key limit # of requests per minute is 150
+   * No rate limit for bublic API.
+   * 
+   * Dependencies: 
+   *    http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/hmac-sha256.js
+   *    http://crypto-js.googlecode.com/svn/tags/3.0.2/build/components/enc-base64-min.js
+   */
+  var gateCoinHelper = function() {
+
+    this.sendRequiredHeader = function(publicKey,key) {
+      $.ajaxSetup({
+        beforeSend: function (jqXHR, settings) {
+          //var publicKey = $("#input_public_key").val();          
+          //var key = $("#input_key").val();
+          if (publicKey == "") {
+            publicKey = gPublicKey; // gPublicKey is a variable which stores the publicKey when login
+          }
+          if (key == "") {
+            key = gApiKey; // gApiKey is a variable which stores the apiKey when login
+          }
+          if (publicKey != null && key != null) {
+            var now = (new Date(Date.now())).getTime() / 1000;
+            var httpMethod = settings.type;
+            var ct = settings.contentType;
+            if (ct == false) {
+              ct = "multipart/form-data";
+            }
+            var contentType = (httpMethod == "GET") ? "" : ct;
+            var message = settings.type + settings.url + contentType + now;
+            var hash = CryptoJS.HmacSHA256(message.toLowerCase(), key);
+            var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);
+
+            jqXHR.setRequestHeader("API_PUBLIC_KEY", publicKey);
+            jqXHR.setRequestHeader("API_REQUEST_SIGNATURE", hashInBase64);
+            jqXHR.setRequestHeader("API_REQUEST_DATE", now);
+          }
+        }
+      });
+    }
+
+
+  }
+
   $scope.showAlert = function() {
    var alertPopup = $ionicPopup.confirm({
      title: 'First time registration',
@@ -65,6 +119,7 @@ angular.module('starter.controllers', [])
       var rv = Items.toggle();
       $scope.bitcoin = rv;    
       console.log('Thank you for advice. ' + rv);
+
    });
  };
 
