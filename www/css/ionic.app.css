@@ -113,12 +113,12 @@ ion-content {
   margin-right: 0;
   font-size: 10px !important; }
   .item-note.withcount {
-    margin-right: 22px; }
+    margin-right: 40px; }
 
 .item .badge {
   padding: 2px 7px !important; }
   .item .badge.badge-balanced {
-    background-color: #0af248 !important; }
+    background-color: #060606 !important; }
 
 .item-avatar-notify {
   width: 12px;

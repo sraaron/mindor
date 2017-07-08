@@ -1,4 +1,4 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Payment History">
   <ion-content>
     <div class="list">
       <div class="item item-remove-animate  chat-item item-avatar  " ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
@@ -7,8 +7,7 @@
           {{chat.time}}
         </span>
         <h3>{{chat.name}}</h3>
-        <p style="color:#404d97; font-size:12px" class="animated fadeIn">{{chat.message}}</p>
-        <p class="item-avatar-notify  animated " ng-class="{'green-notify': chat.online , 'flash': chat.online}"></p>
+        <p style="color:#404d97; font-size:12px" class="animated fadeIn">{{chat.message}}</p>       
         <span class="badge badge-balanced">{{chat.msgCount}}</span>
       </div>
     </div>

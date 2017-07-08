@@ -3,8 +3,8 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 
   // --------------------- Pie Chart Configuration -----------------------------
-  $scope.pieLabels = ["FB", "Twitter", "Instagram"];
-  $scope.pieData = [300, 500, 100];
+  $scope.pieLabels = ["Leisure", "Health and Beauty", "Daily Expenses", "Housing and Utilities", "Emergency"];
+  $scope.pieData = [300, 500, 400, 200, 100];
 
   // --------------------- Line Chart Configuration ----------------------------
   $scope.lineSeries = ['Active', 'Inactive'];
@@ -13,6 +13,7 @@ angular.module('starter.controllers', [])
     [65, 59, 80, 81, 56, 55, 40],
     [28, 48, 40, 19, 86, 27, 90]
   ];
+
 
   // --------------------- animation for green color .badge-notification icon---
   anime({
