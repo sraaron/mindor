@@ -53,8 +53,8 @@ angular.module('starter.controllers', [])
 
   $scope.showAlert = function() {
    var alertPopup = $ionicPopup.confirm({
-     title: 'Try again later!',
-     template: 'No Connection Found.'
+     title: 'First time registration',
+     template: 'Do you approve <b>Gatecoin</b> to receive your name, email address, HKID, and proof of address for registration purposes?'
    });
 
    alertPopup.then(function(res) {
