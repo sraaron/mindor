@@ -6,42 +6,42 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 1,
-    name: 'Max Lynx',
+    name: 'Gym membership',
     online: true,
-    msgCount: 5,
+    msgCount: 4,
     time: '11.35 AM',
-    message: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    msgCount: 1,
-    time: '10.35 AM',
-    message: 'So careful with our relationship. Now you are part of us.',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    time: 'YESTERDAY',
-    name: 'Perry Governor',
-    online: true,
-
-    message: 'You have mistaken I am not the person whom u r looking for!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    time: 'YESTERDAY',
-    name: 'Mike Harrington',
-    message: 'But I still have that voucher for mc donalds! What about that instead?',
-    face: 'img/mike.png'
+    message: '$400',
+    face: 'img/bicycle.png'
   }, {
     id: 5,
     msgCount: 2,
-    time: 'FRIDAY',
-
-    name: 'Alice Whitman',
+    time: 'YESTERDAY',
+    name: 'Groceries',
     online: true,
-    message: 'Thank You hunny. I love u sooooo much......',
-    face: 'img/mike.png'
+    message: '$200',
+    face: 'img/cart.png'
+  }, {
+    id: 4,
+    time: 'FRIDAY',
+    msgCount: 2,
+    name: 'Electricity Bill',
+    message: '$200',
+    face: 'img/house.png'
+  }, {
+    id: 2,
+    name: 'Travel to China',
+    msgCount: 20,
+    time: '21/06/2017',
+    message: '$2000',
+    face: 'img/plane.png'
+  }, {
+    id: 3,
+    time: '01/06/2017',
+    msgCount: 60,
+    name: 'Travel to Australia',
+    online: true,
+    message: '$6000',
+    face: 'img/plane.png'
   }];
 
   return {
