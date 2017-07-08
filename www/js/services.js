@@ -1,5 +1,18 @@
 angular.module('starter.services', [])
 
+.factory('Items', function() {
+    var done = false;
+    return {
+    all: function() {
+      return done;
+    },
+    toggle: function() {
+      done = !done;
+      return done;
+    }
+};
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -50,7 +63,7 @@ angular.module('starter.services', [])
     message: '$6000',
     face: 'img/plane.png'
   }];
-
+  
   return {
     all: function() {
       return chats;
@@ -99,7 +112,7 @@ angular.module('starter.services', [])
     color: '#F5A623',
     url: '',
 
-    description: '<i class="italic thin">"Selection of money market funds and governemnt bond funds."</i><span class="small"><b>20%</b> users recommend<span>'
+    description: '<i class="italic thin">"Selection of money market funds and governemnt bond funds."</i></br><span class="small"><b>20%</b> users recommend<span>'
   }, {
     img: '../img/icons/Saving.png',
     title: 'Buy Bitcoin',

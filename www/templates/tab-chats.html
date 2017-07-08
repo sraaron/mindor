@@ -1,17 +1,15 @@
 <ion-view view-title="Payment History">
   <ion-content>
-    <div class="list">
-      <div class="item item-remove-animate  chat-item item-avatar  " ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}" class="animated flipIxnX">
-        <span class="item-note" ng-class="{'withcount': chat.msgCount}">
-          {{chat.time}}
-        </span>
-        <h3>{{chat.name}}</h3>
-        <p style="color:#404d97; font-size:12px" class="animated fadeIn">{{chat.message}}</p>
-        <span ng-if="$first" class="pull-right badge-neg">{{chat.msgCount}}</span>
-        <span ng-if="!$first" class="pull-right badge-balanced">{{chat.msgCount}}</span>        
+    <h3>val {{bitcoin}} </h3>
+    <div class="list">      
+      <div class="animated item item-remove-animate animated chat-item item-avatar  " ng-repeat="chat in chats" ng-show="!($first && !bitcoin)" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+          <img ng-src="{{chat.face}}" class="animated zoomIn flipIxnX">
+          <span class="item-note" ng-class="{'withcount': chat.msgCount}">{{chat.time}}</span>
+          <h3 class="animated fadeIn">{{chat.name}}</h3>
+          <p style="color:#404d97; font-size:12px" class="animated fadeIn">{{chat.message}}</p>        
+          <span ng-if="$first" class="animated rubberBand pull-right badge-neg">{{chat.msgCount}}</span>
+          <span ng-if="!$first" class="animated rubberBand pull-right badge-balanced">{{chat.msgCount}}</span>
       </div>
     </div>
-
   </ion-content>
 </ion-view>

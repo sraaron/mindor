@@ -37,18 +37,22 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
+.controller('ChatsCtrl', function($scope, Chats, Items) {
+  $scope.chats = Chats.all(); 
+  $scope.bitcoin = Items.all();
+  $scope.$watch('bitcoin', function() {
+      $scope.bitcoin = Items.all();
+  });
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, Chats, $stateParams) {
+.controller('ChatDetailCtrl', function($scope, Chats, $stateParams) {  
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('SocialCtrl', function($scope, Socials, $stateParams, $ionicPopup, $timeout) {
+.controller('SocialCtrl', function($scope, Socials, $stateParams, $ionicPopup, $timeout, Items) {
   $scope.items = Socials.all();
 
   $scope.showAlert = function() {
@@ -57,8 +61,10 @@ angular.module('starter.controllers', [])
      template: 'Do you approve <b>Gatecoin</b> to receive your name, email address, HKID, and proof of address for registration purposes?'
    });
 
-   alertPopup.then(function(res) {
-     console.log('Thank you for advice.');
+   alertPopup.then(function() {     
+      var rv = Items.toggle();
+      $scope.bitcoin = rv;    
+      console.log('Thank you for advice. ' + rv);
    });
  };
 
