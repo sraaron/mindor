@@ -72,35 +72,35 @@ angular.module('starter.services', [])
     Real Estate Stocks
   */
   var socials = [{
-    img: '../img/icons/fb.svg',
+    img: '../img/icons/highRisk.png',
     title: 'High Risk Investment',
     count: 6,
     color: '#000000',
-    description: '<i class="italic thin">"Emerging Markets and Large corporation Stocks can provide high returns"</i> </br><span class="small"><b>568</b> users recommend<span>'
+    description: '<i class="italic thin">"Emerging Markets and Large corporation Stocks can provide high returns"</i> </br><span class="small"><b>70%</b> users recommend<span>'
   }, {
-    img: '../img/icons/youtube.svg',
+    img: '../img/icons/medRisk.png',
     title: 'Medium Risk Investment',
-    count: 3.4,
-    color: '#F5A623',
-    color: '#F5A623',
+    count: 3,
+    color: '#D0021B',
+    color: '#D0021B',
     
-    description: '<b>Balaced portfolio</b> grow your assets with limited risk <i class="italic thin">"Includes <b>Corporate</b> bonds from small and medium companies "</i>'
+    description: '<i class="italic thin">"Includes Corporate bonds from small and medium companies"</i></br><span class="small"><b>60%</b> users recommend<span>'
   }, {
-    img: '../img/icons/twitter.svg',
+    img: '../img/icons/lowRisk.png',
     title: 'Low Risk',
     count: 0.75,
-    color: '#D0021B',
+    color: '#F5A623',
     url: 'https://twitter.com/deshatom',
 
-    description: '<b>NodeSphere and 6 others</b> liked your Retweet <span class="small thin"> Nov <b>9</b></span>'
+    description: '<i class="italic thin">"Grow your capital slowly, with a guaranted"</i><span class="small"><b>20%</b> users recommend<span>'
   }, {
-    img: '../img/icons/twitter.svg',
+    img: '../img/icons/Saving.png',
     title: 'Buy Bitcoin',
     count: 576,
     color: '#FFD700',
     url: 'https://twitter.com/deshatom',
 
-    description: '<b>To the moon!</b> </br><i class="italic thin">"Get your Lamborghini today, or maybe next year"</i></br><span class="small"><b>3658</b> users recommend<span>'
+    description: '</br><i class="italic thin">"Get your ouse at The Peak today, or maybe next year"</i></br><span class="small"><b>99%</b> users recommend<span>'
   }
 ];
 
