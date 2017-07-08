@@ -3,8 +3,8 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 
   // --------------------- Pie Chart Configuration -----------------------------
-  $scope.pieLabels = ["Leisure", "Health and Beauty", "Daily Expenses", "Housing and Utilities", "Emergency"];
-  $scope.pieData = [300, 500, 400, 200, 100];
+  $scope.pieLabels = ["Leisure", "Daily Expenses", "Emergency"];
+  $scope.pieData = [300, 200, 100];
 
   // --------------------- Line Chart Configuration ----------------------------
   $scope.lineSeries = ['Active', 'Inactive'];

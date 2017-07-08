@@ -5,16 +5,23 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var chats = [{
+    id: 0,
+    time: 'TODAY',
+    msgCount: "-$88",
+    name: 'Investment',
+    message: 'Investment into Gatecoin',
+    face: 'img/transparent_logo.png'
+  }, {
     id: 1,
     name: 'Gym membership',
     online: true,
-    msgCount: 4,
-    time: '11.35 AM',
+    msgCount: "+$4",
+    time: 'YESTERDAY',
     message: '$400',
     face: 'img/bicycle.png'
   }, {
     id: 5,
-    msgCount: 2,
+    msgCount: "+$2",
     time: 'YESTERDAY',
     name: 'Groceries',
     online: true,
@@ -23,21 +30,21 @@ angular.module('starter.services', [])
   }, {
     id: 4,
     time: 'FRIDAY',
-    msgCount: 2,
+    msgCount: "+$2",
     name: 'Electricity Bill',
     message: '$200',
     face: 'img/house.png'
   }, {
     id: 2,
     name: 'Travel to China',
-    msgCount: 20,
+    msgCount: "+$20",
     time: '21/06/2017',
     message: '$2000',
     face: 'img/plane.png'
   }, {
     id: 3,
     time: '01/06/2017',
-    msgCount: 60,
+    msgCount: "+$60",
     name: 'Travel to Australia',
     online: true,
     message: '$6000',
