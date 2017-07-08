@@ -1,8 +1,7 @@
 <ion-view view-title="Payment History">
-  <ion-content>
-    <!--<h3>val {{bitcoin}} </h3>-->
+  <ion-content>    
     <div class="list">      
-      <div class="animated item item-remove-animate animated chat-item item-avatar  " ng-repeat="chat in chats" ng-show="!($first && !bitcoin)" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+      <div class="animated item item-remove-animate animated chat-item item-avatar  " ng-repeat="chat in chats" ng-show="!($first && bitcoin)" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
           <img ng-src="{{chat.face}}" class="animated zoomIn flipIxnX">
           <span class="item-note" ng-class="{'withcount': chat.msgCount}">{{chat.time}}</span>
           <h3 class="animated fadeIn">{{chat.name}}</h3>
