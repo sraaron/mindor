@@ -112,7 +112,7 @@ angular.module('starter.services', [])
     color: '#F5A623',
     url: '',
 
-    description: '<i class="italic thin">"Selection of money market funds and governemnt bond funds."</i><span class="small"><b>20%</b> users recommend<span>'
+    description: '<i class="italic thin">"Selection of money market funds and governemnt bond funds."</i></br><span class="small"><b>20%</b> users recommend<span>'
   }, {
     img: '../img/icons/Saving.png',
     title: 'Buy Bitcoin',

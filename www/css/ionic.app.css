@@ -171,8 +171,14 @@ ion-content {
   width: 18px;
   height: 18px;
   border-radius: 100%;
-  background: #19b608;
+  background: #1568ff;
   border: 2px solid white; }
+
+.checker {
+  top: -3px;
+  right: 1px;
+  color: white;
+  position: absolute; }
 
 .box-blue {
   color: #07193b; }
