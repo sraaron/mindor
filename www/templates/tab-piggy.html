@@ -1,12 +1,20 @@
 <ion-view view-title="My PiggyBank">
   <ion-content>
-    <ion-list>
-      <li class="item" ng-repeat="piggy in piggies">
+    <ion-list>  
+      <li class="item item-toggle">        
+        <label class="toggle">          
+          <input type="checkbox" ng-model="user.showPassword">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>  
+      <li class="item" ng-repeat="piggy in piggies">        
         <label class="input-label">       
           {{piggy.cathegory}}   
-          <div class="range" >                                    
+          <div class="range">                                    
             <i class="icon {{piggy.icon}} larger"></i>
-            <input type="range" ng-model="currentVal" min="0" max="100" value="{{piggy.defaultValue}}" step="1">
+              <input type="range" ng-model="currentVal" min="0" max="100" value="{{piggy.defaultValue}}" step="1">
             <i class="icon {{piggy.icon}}"></i> {{currentVal}}%
             </ion-item>
           </div>

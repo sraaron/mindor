@@ -48,8 +48,20 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('SocialCtrl', function($scope, Socials, $stateParams) {
+.controller('SocialCtrl', function($scope, Socials, $stateParams, $ionicPopup, $timeout) {
   $scope.items = Socials.all();
+
+  $scope.showAlert = function() {
+   var alertPopup = $ionicPopup.confirm({
+     title: 'Try again later!',
+     template: 'No Connection Found.'
+   });
+
+   alertPopup.then(function(res) {
+     console.log('Thank you for advice.');
+   });
+ };
+
 })
 
 .controller('AccountCtrl', function($scope, Accounts, $stateParams) {
