@@ -102,6 +102,21 @@ ion-content {
 .larger {
   font-size: larger !important; }
 
+.circle {
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  background: #000; }
+
+.allocation {
+  position: absolute;
+  color: green;
+  float: right; }
+
+.range {
+  width: 80%; }
+
 /*----------------------------------------------------------------------------*/
 /*----------------------------------- Common ---------------------------------*/
 /*----------------------------------------------------------------------------*/

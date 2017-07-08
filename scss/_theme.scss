@@ -135,6 +135,27 @@ ion-content {
     font-size: larger !important;
 }
 
+.circle {
+  //width: 500px;
+  //height: 500px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  //line-height: 500px;
+  text-align: center;
+  background: #000
+}
+
+.allocation {
+  position:absolute;
+  color: green;
+  float: right;  
+}
+
+.range {
+  width: 80%;
+}
+
 /*----------------------------------------------------------------------------*/
 /*----------------------------------- Common ---------------------------------*/
 /*----------------------------------------------------------------------------*/

@@ -123,7 +123,7 @@ return {
     {
       cathegory:"Leisure",
       icon:"ion-android-plane",
-      defaultValue: "8"
+      defaultValue: "8"      
     },
     {
       cathegory:"Sports",

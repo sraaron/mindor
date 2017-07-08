@@ -1,25 +1,34 @@
 <ion-view view-title="My PiggyBank">
   <ion-content>
+
+    <!--
     <ion-list>  
-      <li class="item item-toggle">        
-        <label class="toggle">          
-          <input type="checkbox" ng-model="user.showPassword">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>  
-      <li class="item" ng-repeat="piggy in piggies">        
+      <div ng-repeat="piggy in piggies">    
+        <div class="circle" draggable="true" style='height:{{piggy.defaultValue}}px;width:{{piggy.defaultValue}}px;line-height:{{piggy.defaultValue}}px; font-size:{{piggy.fontsize}}'>
+          <span class="icon {{piggy.icon}}">
+            {{piggy.cathegory}}
+          </span>
+        </div>        
+      </div>
+    </ion-list>
+    -->
+
+
+    <ion-list>  
+      <div ng-repeat="piggy in piggies">    
+
+
+        <!--<span class="icon {{piggy.icon}}">{{piggy.cathegory}}</span>-->
         <label class="input-label">       
-          {{piggy.cathegory}}   
+          {{piggy.cathegory}}   </label>
           <div class="range">                                    
-            <i class="icon {{piggy.icon}} larger"></i>
-              <input type="range" ng-model="currentVal" min="0" max="100" value="{{piggy.defaultValue}}" step="1">
-            <i class="icon {{piggy.icon}}"></i> {{currentVal}}%
-            </ion-item>
+            <i class="icon {{piggy.icon}}"></i>
+              <input type="range" ng-model="piggy.defaultValue" min="0" max="15" value="{{piggy.defaultValue}}" step="1" list="tickmarks">
+            <!--<i class="icon {{piggy.icon}}"></i>--> {{piggy.defaultValue}}%
+            <label class="allocation" ng-if="piggy.defaultValue > 6"> Aggessive </label>        
           </div>
-        </label>
-      </li>
+        
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>
