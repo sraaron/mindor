@@ -10,8 +10,8 @@ angular.module('starter.controllers', [])
   $scope.lineSeries = ['Active', 'Inactive'];
   $scope.lineLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
   $scope.lineData = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
+    [10, 30, 50, 60, 70, 100, 180],
+    [20, 40, 80, 70, 100, 150, 200]
   ];
 
 
