@@ -5,15 +5,14 @@ angular.module('starter.controllers', [])
   // --------------------- Pie Chart Configuration -----------------------------
   $scope.pieLabels = ["Leisure", "Daily Expenses", "Emergency"];
   $scope.pieData = [300, 200, 100];
-  
+
   // --------------------- Line Chart Configuration ----------------------------
-  //$scope.lineSeries = ['Active', 'Inactive'];
+  $scope.lineSeries = ['Active', 'Inactive'];
   $scope.lineLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
   $scope.lineData = [
-    [5, 40, 66, 75, 80, 90, 145],
-    [5, 45, 85, 100, 120, 150, 200]
+    [65, 59, 80, 81, 56, 55, 40],
+    [28, 48, 40, 19, 86, 27, 90]
   ];
-  $scope.colors = ['#45b7cd', '#ff6384'];
 
 
   // --------------------- animation for green color .badge-notification icon---
@@ -40,10 +39,12 @@ angular.module('starter.controllers', [])
 
 .controller('ChatsCtrl', function($scope, Chats, Items) {
   $scope.chats = Chats.all(); 
-  $scope.bitcoin = Items.all();
-  $scope.$watch('bitcoin', function() {
-      $scope.bitcoin = Items.all();
-  });
+  $scope.bitcoin = Items.getFirstName();
+  console.log($scope.bitcoin);
+
+  $scope.$watch(function () { return Items.getFirstName(); }, function (newValue, oldValue) {
+        if (newValue !== oldValue) $scope.firstName = newValue;
+    });
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
@@ -105,12 +106,18 @@ angular.module('starter.controllers', [])
 
     this.sendRequiredHeader = function(publicKey,key) {
       $.ajaxSetup({
-        beforeSend: bfrSending
+        beforeSend: bfrSending,
+        
       });
     }
 
 
   }
+  $scope.firstName = false;
+    $scope.$watch('firstName', function (newValue, oldValue) {
+      if (newValue !== oldValue) Items.setFirstName(newValue);
+      console.log("listener")
+  });
 
   $scope.showAlert = function() {
    var alertPopup = $ionicPopup.confirm({
@@ -118,10 +125,21 @@ angular.module('starter.controllers', [])
      template: 'Do you approve <b>Gatecoin</b> to receive your name, email address, HKID, and proof of address for registration purposes?'
    });
 
-   alertPopup.then(function() {     
-      var rv = Items.toggle();
-      $scope.bitcoin = rv;    
-      console.log('Thank you for advice. ' + rv);
+   alertPopup.then(function() {
+
+    $scope.firstName = true;
+
+      $scope.bitcoin = false; 
+      $scope.$watch('bitcoin', function (newValue, oldValue) {
+          console.log(newValue, oldValue);
+          if (newValue !== oldValue) {
+            Items.setItem(true);
+          }                    
+          console.log("asdasd");
+      }); 
+      //var rv = Items.setItem(true);
+      //$scope.bitcoin = true;
+      console.log('Thank you for advice. ' + $scope.bitcoin);
 
    });
  };

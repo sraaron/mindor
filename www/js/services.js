@@ -1,16 +1,32 @@
 angular.module('starter.services', [])
 
-.factory('Items', function() {
+/*.factory('Items', function() {
     var done = false;
     return {
-    all: function() {
+    getItem: function() {
       return done;
     },
-    toggle: function() {
-      done = !done;
+    setItem: function(newVal) {
+      done = newVal;
       return done;
     }
 };
+})*/
+
+.factory('Items', function(){
+    var data =
+        {
+            FirstName: false
+        };
+    
+    return {
+        getFirstName: function () {
+            return data.FirstName;
+        },
+        setFirstName: function (firstName) {
+            data.FirstName = firstName;
+        }
+    };
 })
 
 .factory('Chats', function() {
